@@ -2,22 +2,36 @@ import React, { useState } from "react";
 import classes from "./style.module.css";
 
 const Main = () => {
-  const [input, setInput] = useState("");
+  const [color, setColor] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let selectedColor = e.target.value
+    setColor(selectedColor);
+  }
 
   return (
     <div className={classes.main}>
       <h1>Color shades Generator</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          type="text"
+          value={color}
+          onChange={handleSubmit}
+          type="color"
           placeholder="Please enter HEX"
         />
-        <input type="submit" value="Generate" />
       </form>
+
+      <Tiles color={color}/>
     </div>
   );
 };
 
+
+const Tiles = ({ color }) => {
+  return (
+    <div style={{ 'background': color }} className={`${classes.tiles}`}>
+    </div>
+  )
+}
 export default Main;

@@ -14,3 +14,16 @@ input[type='submit'] {
     font-weight: bold;
     color: #fff;
 }
+
+.tile {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}
+
+.tiles {
+    display: flex;
+    margin: 1em;
+    height: 70vh;
+    border: 1px solid black;
+}
