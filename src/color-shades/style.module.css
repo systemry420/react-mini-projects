@@ -1,0 +1,16 @@
+.main {
+    padding: .5em 2em;
+}
+
+input {
+    padding: 1em;
+    margin: .5em;
+    box-shadow: 0 0 3px 3px gray;
+    border: none;
+}
+
+input[type='submit'] {
+    background-color: rgb(42, 127, 255);
+    font-weight: bold;
+    color: #fff;
+}
