@@ -1,0 +1,31 @@
+nav {
+    box-shadow: 0 0 2px 2px gray;
+    height: 40px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+}
+
+li {
+    height: 100%;
+    width: 33%;
+}
+
+li a {
+    text-decoration: none;
+    padding: 1em;
+    height: 100%;
+    vertical-align: middle;
+}
+
+li span.icon {
+    margin-left: 10px;
+}
+
+li a:hover {
+    color: #fff;
+    background-color: rgb(46, 113, 212);
+}

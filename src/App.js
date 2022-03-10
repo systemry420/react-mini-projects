@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import Main from './color-shades/Main';
+import { Navbar } from './navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Main />
     </div>
   );
