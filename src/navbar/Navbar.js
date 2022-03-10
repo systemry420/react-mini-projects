@@ -1,10 +1,10 @@
 import React from "react";
 import { data } from "./data";
-import './nav.css'
+import classes from './nav.module.css'
 
 export const Navbar = () => {
   return (
-    <nav>
+    <nav className={classes.nav}>
       <ul>
         {data.map((obj) => {
           return (
