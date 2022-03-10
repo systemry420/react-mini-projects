@@ -1,14 +1,18 @@
 import Main from './color-shades/Main';
+import { ModalProvider } from './ctx/ModalContext';
+import Modal from './modal/Modal';
 import { Navbar } from './navbar/Navbar';
 import Sidebar from './sidebar/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Sidebar />
-      <Main />
-    </div>
+    <ModalProvider>
+      <div className="App">
+        <Navbar />
+        <Main />
+        <Modal />
+      </div>
+    </ModalProvider>
   );
 }
 
