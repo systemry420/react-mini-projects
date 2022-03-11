@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { ModalContext } from "../ctx/ModalContext";
+import Submenu from "../navbar/Submenu";
 import classes from "./style.module.css";
 
 const Main = () => {
