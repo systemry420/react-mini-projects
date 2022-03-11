@@ -2,7 +2,11 @@ import React from 'react'
 
 
 const Submenu = ({classes}) => {
-  return <div className={classes}>Submenu</div>;
+    console.log(classes);
+  return <div 
+  className={classes.classes}
+  style={{left: classes.center}}
+  >Submenu</div>;
 }
 
 export default Submenu;

@@ -4,7 +4,7 @@ const ModalContext = React.createContext();
 
 const ModalProvider = ({ children }) => {
   const [isModalShown, setIsModalShown] = useState(false);
-  const [isSubShown, setIsSubShown] = useState(true)
+  const [isSubShown, setIsSubShown] = useState(false)
 
   const showModal = () => {
     setIsModalShown(true);
