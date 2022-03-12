@@ -33,7 +33,8 @@ const CockProvider = ({ children }) => {
   }, [searchTerm]);
 
   return (
-    <CockContext.Provider value={{ loading, cocktails, searchTerm }}>
+    <CockContext.Provider 
+        value={{ loading, cocktails, setSearchTerm }}>
       {children}
     </CockContext.Provider>
   );
