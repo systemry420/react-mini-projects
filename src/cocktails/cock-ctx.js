@@ -6,7 +6,7 @@ const CockContext = React.createContext();
 
 const CockProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("a");
+  const [searchTerm, setSearchTerm] = useState("c");
   const [cocktails, setCocktails] = useState([]);
 
   const fetchDrinks = async () => {
@@ -14,7 +14,6 @@ const CockProvider = ({ children }) => {
       try {
         const res = await fetch(`${url}${searchTerm}`)
         const data = await res.json()
-        console.log(data);
         if (!data['drinks']) {
             setCocktails([])
         } else {
