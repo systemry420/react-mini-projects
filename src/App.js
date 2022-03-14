@@ -10,26 +10,30 @@ import Home from './cocktails/pages/Home';
 import Error from './cocktails/pages/Error';
 import About from './cocktails/pages/About';
 import SingleDrink from './cocktails/pages/SingleDrink';
+import RandomUser from './random-user/RandomUser';
 
 function App() {
   return (
     <ModalProvider>
       <CartProvider>
-      <div className="App">
-        <Router>
-        <Navbar />
-          <Routes>
-            <Route exact path='/' element={<Home />}></Route>
-            <Route exact path='/cocktail/:id' element={<SingleDrink />}></Route>
-            <Route exact path='/about' element={<About />}></Route>
-            <Route path='*' element={<Error />}></Route>
-          </Routes>
-        </Router>
-         {/* <Navbar /> */}
-        {/* <CartContainer /> */}
-        {/*<Main />
+        <div className="App">
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route exact path="/" element={<RandomUser />}></Route>
+              <Route
+                exact
+                path="/cocktail/:id"
+                element={<SingleDrink />}
+              ></Route>
+              <Route exact path="/about" element={<About />}></Route>
+              <Route path="*" element={<Error />}></Route>
+            </Routes>
+          </Router>
+          {/* <CartContainer /> */}
+          {/*<Main />
         <Modal /> */}
-      </div>
+        </div>
       </CartProvider>
     </ModalProvider>
   );
