@@ -11,16 +11,41 @@ import About from './cocktails/pages/About';
 import SingleDrink from './cocktails/pages/SingleDrink';
 import RandomUser from './random-user/RandomUser';
 import Main from './pagination/Main';
+import React, { useState } from 'react'
+
+const getTheme = () => {
+  const theme = 'light-theme'
+  if (localStorage.getItem('theme')) {
+    return localStorage.getItem('theme')
+  }
+  return theme
+}
 
 function App() {
+  const [theme, setTheme] = useState(getTheme());
+  
+  const toggleTheme = () => {
+    if (theme === 'light-theme') {
+      document.documentElement.className = 'dark-theme'
+      setTheme('dark-theme')
+    } else {
+      document.documentElement.className = 'light-theme'
+      setTheme('light-theme')
+    }
+    localStorage.setItem('theme', theme)
+  }
+
   return (
     <ModalProvider>
       <CartProvider>
         <div className="App">
+        <p>
+          <button className='btn btn-primary' onClick={toggleTheme}>Toggle Theme</button>
+        </p>
           <Router>
             <Navbar />
             <Routes>
-              <Route exact path="/" element={<Main />}></Route>
+              {/* <Route exact path="/" element={<Main />}></Route> */}
               <Route
                 exact
                 path="/cocktail/:id"
