@@ -1,4 +1,3 @@
-import Main from './color-shades/Main';
 import { ModalProvider } from './ctx/ModalContext';
 import Modal from './modal/Modal';
 import { CartProvider } from './shopping-cart/cart.context';
@@ -11,6 +10,7 @@ import Error from './cocktails/pages/Error';
 import About from './cocktails/pages/About';
 import SingleDrink from './cocktails/pages/SingleDrink';
 import RandomUser from './random-user/RandomUser';
+import Main from './pagination/Main';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Router>
             <Navbar />
             <Routes>
-              <Route exact path="/" element={<RandomUser />}></Route>
+              <Route exact path="/" element={<Main />}></Route>
               <Route
                 exact
                 path="/cocktail/:id"

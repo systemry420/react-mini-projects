@@ -35,6 +35,8 @@ function RandomUser() {
             picture: `${large}`
         })
 
+        console.log(user);
+
     } catch(e) {
 
     }
@@ -45,14 +47,28 @@ function RandomUser() {
       return () => {
       };
   }, []);
-
+ 
   return (
-    <>
-      <h2>Random User</h2>
-      {user.name} - 
-      {user.phone} - 
-    </>
+    <section className='section'>
+      <User user={user} />
+      <button className='btn btn-primary' onClick={fetchUser}>GET</button>
+    </section>
   );
+}
+
+const User = ({user}) => {
+  return (
+    <div className='container'>
+      <div className='block'>
+        <div className='user-title'><h2>Random User</h2></div>
+        <p>{user.name} <FaUser /> </p> 
+        <p>{user.phone}</p>
+        <p>{user.email} <FaEnvelopeOpen /> </p> 
+        <p>{user.location} <FaMap /> </p>
+        <img src={user.picture} alt={user.name}  /> 
+      </div>
+    </div>
+  )
 }
 
 export default RandomUser;
