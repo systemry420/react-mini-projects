@@ -10,8 +10,9 @@ import Error from './cocktails/pages/Error';
 import About from './cocktails/pages/About';
 import SingleDrink from './cocktails/pages/SingleDrink';
 import RandomUser from './random-user/RandomUser';
-import Main from './pagination/Main';
 import React, { useState } from 'react'
+import Main from './github-user/Main';
+import { GithubProvider } from './github-user/context/Github-ctx';
 
 const getTheme = () => {
   const theme = 'light-theme'
@@ -38,19 +39,20 @@ function App() {
   return (
     <ModalProvider>
       <CartProvider>
+        <GithubProvider>
         <div className="App">
-        <p>
+        {/* <p>
           <button className='btn btn-primary' onClick={toggleTheme}>Toggle Theme</button>
-        </p>
+        </p> */}
           <Router>
-            <Navbar />
+            {/* <Navbar /> */}
             <Routes>
-              {/* <Route exact path="/" element={<Main />}></Route> */}
+                <Route exact path="/" element={<Main />}></Route>
               <Route
                 exact
                 path="/cocktail/:id"
                 element={<SingleDrink />}
-              ></Route>
+                ></Route>
               <Route exact path="/about" element={<About />}></Route>
               <Route path="*" element={<Error />}></Route>
             </Routes>
@@ -59,6 +61,7 @@ function App() {
           {/*<Main />
         <Modal /> */}
         </div>
+        </GithubProvider>
       </CartProvider>
     </ModalProvider>
   );
