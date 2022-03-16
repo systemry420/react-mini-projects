@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
+import Info from './components/Info';
 import { GithubCtx, GithubProvider } from './context/Github-ctx'
 
 const Main = () => {
     const context = useContext(GithubCtx);
-    console.log(context);
   return (
-        <main>
-            <h1>Github User</h1>
-
-        </main>
+    <main>
+        <h1>Github User</h1>
+        <Info />
+    </main>
   )
 }
 
