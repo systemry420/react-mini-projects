@@ -36,7 +36,7 @@ const chartData = [
 ]
 
 const chartConfigs = {
-  type: "column3d", // The chart type
+  type: "doughnut2d", // The chart type
   width: "700", // Width of the chart
   height: "400", // Height of the chart
   dataFormat: "json", // Data type
@@ -56,11 +56,11 @@ const chartConfigs = {
 };
 
 
-const Column3D = () => {
+const Dough2D = () => {
   return (
     <ReactFC {...chartConfigs} />
   )
 }
 
-export default Column3D
+export default Dough2D
 
