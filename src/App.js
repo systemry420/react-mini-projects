@@ -1,4 +1,4 @@
-import { ModalProvider } from './ctx/ModalContext';
+import { ModalProvider } from './modal/ctx/ModalContext';
 import Modal from './modal/Modal';
 import { CartProvider } from './shopping-cart/cart.context';
 import CartContainer from './shopping-cart/CartContainer';
