@@ -3,7 +3,6 @@ import { GithubCtx } from '../context/Github-ctx';
 
 const Followers = () => {
     const { followers } = useContext(GithubCtx);
-    console.log(followers);
 
   return (
     <section className='section'>

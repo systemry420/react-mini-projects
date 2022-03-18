@@ -36,7 +36,7 @@ const chartData = [
 ]
 
 const chartConfigs = {
-  type: "column3d", // The chart type
+  type: "column2d", // The chart type
   width: "700", // Width of the chart
   height: "400", // Height of the chart
   dataFormat: "json", // Data type
