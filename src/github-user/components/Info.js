@@ -4,7 +4,6 @@ import { FaReact, FaUser, FaUserPlus, FaGithubSquare } from "react-icons/fa";
 
 const Info = () => {
     const { gitUser } = useContext(GithubCtx);
-    console.log(gitUser);
     const {
         public_repos,
         followers,
